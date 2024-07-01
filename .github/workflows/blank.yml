@@ -1,0 +1,123 @@
+from langs.base import BaseLang
+
+class Ruby(BaseLang):
+    def compile(self, code):
+        # Ruby is an interpreted language, no compilation needed
+        return code
+
+    def execute(self, code):
+        with open('main.rb', 'w') as f:
+            f.write(code)
+        result = self.run_command('ruby main.rb')
+        return result
+
+    def get_extension(self):
+    
+        return 'rb'
+
+      from langs.base import BaseLang
+
+class Ruby(BaseLang):
+    def compile(self, code):
+        # Ruby is an interpreted language, no compilation needed
+        return code
+
+    def execute(self, code):
+        with open('main.rb', 'w') as f:
+            f.write(code)
+        resulfrom langs.base import BaseLang
+
+class PHP(BaseLang):
+    def compile(self, code):
+        # PHP is an interpreted language, no compilation needed
+        return code
+
+    def execute(self, code):
+        with open('main.php', 'w') as f:
+            f.write(code)
+        result = self.run_command('php main.php')
+        return result
+
+    def get_extension(self):
+        return 'php't = self.run_command('ruby main.rb')
+        return result
+
+    def get_extension(self):
+        return 'rb'
+
+        from langs.base import BaseLang
+
+class Swift(BaseLang):
+    def compile(self, code):
+        with open('main.swift', 'w') as f:
+            f.write(code)
+        result = self.run_command('swiftc main.swift -o main')
+        return result
+
+    def execute(self, code):
+        self.compile(code)
+        result = self.run_command('./main')
+        return result
+
+    def get_extension(self):
+        return 'swift'
+
+        import unittest
+from langs.ruby import Ruby
+
+class TestRuby(unittest.TestCase):
+    def setUp(self):
+        self.ruby = Ruby()
+
+    def test_hello_world(self):
+        code = 'puts "Hello, World!"'
+        result = self.ruby.execute(code)
+        self.assertIn('Hello, World!', result)
+
+if __name__ == '__main__':
+    unittest.main()
+
+    
+import unittest
+from langs.swift import Swift
+
+class TestSwift(unittest.TestCase):
+    def setUp(self):
+        self.swift = Swift()
+
+    def test_hello_world(self):
+        code = 'print("Hello, World!")'
+        result = self.swift.execute(code)
+        self.assertIn('Hello, World!', result)
+
+if __name__ == '__main__':
+    unittest.main()
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Judge</title>
+</head>
+<body>
+    <h1>Code Judge</h1>
+    <textarea id="code" rows="10" cols="50"></textarea><br>
+    <select id="language">
+        <option value="python">Python</option>
+        <option value="ruby">Ruby</option>
+        <option value="php">PHP</option>
+        <option value="swift">Swift</option>
+    </select><br>
+    <button onclick="runCode()">Run</button>
+    <pre id="output"></pre>
+
+    <script src="app.js"></script>
+</body>
+</html>
+
+    
+        
+
+        
+
+        
